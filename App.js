@@ -76,6 +76,7 @@ export default function App() {
     // console.log(numeroAleatorio + ' - ' + frases[numeroAleatorio])
 
     setTextoFrase('"' + frases[ numeroAleatorio ] + '"')
+    setImg(require('./src/images/biscoitoAberto.png'))
   }
 
   return (
