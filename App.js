@@ -79,6 +79,11 @@ export default function App() {
     setImg(require('./src/images/biscoitoAberto.png'))
   }
 
+  function reiniciarBiscoito() {
+    setTextoFrase('');
+    setImg(require('./src/images/biscoito.png'))
+  }
+
   return (
     <View style={ styles.container }>
       <Image
@@ -97,7 +102,10 @@ export default function App() {
         </View>
       </TouchableOpacity>
 
-      <TouchableOpacity style={ [ styles.botao, { marginTop: 15, borderColor: '#121212' } ] }>
+      <TouchableOpacity
+        style={ [ styles.botao, { marginTop: 15, borderColor: '#121212' } ] }
+        onPress={ () => reiniciarBiscoito() }
+      >
         <View style={ styles.btnArea }>
           <Text style={ [ styles.btnTexto, { color: '#121212' } ] }>
             Reiniciar Biscoito
